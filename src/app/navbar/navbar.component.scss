@@ -1,0 +1,26 @@
+a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.active::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;    
+    background-color: #F05A7F;
+}
+
+.nav-link:hover::after{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #F05A7F;
+}
+
+.nav-link::after{
+    content: '';
+    transition: transform all 3.5s !important;
+    // width: 0%;
+}

@@ -1,0 +1,139 @@
+
+
+h3{
+    font-family: "Merienda", cursive;
+}
+
+.container{
+    border-radius: 10px;
+    // padding: 20px;
+    background-color: rgba(66, 66, 66, 0.329);
+}
+
+#about{
+    color: white;   
+    padding-top: 100px;
+    background-image: url(../../assets/image/bg.jpg);
+    background-size: cover;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.colortext{
+    color: #F05A7F;
+}
+
+#about ul{
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#about li{
+    margin-bottom: 20px;
+}
+
+.firsttxt::after{
+    // display: flex;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin-left: 12px;
+    background-color: #F05A7F;
+    // margin-top: 10px;
+}
+.firsttxt{
+    // display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 10px;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+}
+
+
+// factssssssssssssssssssss
+
+.abs{
+    background-color: #74737334;
+    border-radius: 6px;
+    transition: all 0.6s;
+}
+.abs:hover{
+    background-color: #b1afaf77;
+    border-radius: 6px;
+    transition: all 0.6s;
+}
+.abs:hover #icon{
+    display: flex;
+    justify-content: center;
+    color: #be1d45c7;
+    background-color: #29272762;
+    padding: 12px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    margin: auto;
+    transition: all 0.6s;
+}
+
+#icon{
+    display: flex;
+    justify-content: center;
+    color: #f05a7fc0;
+    background-color: #aaaaaa62;
+    padding: 12px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    margin: auto;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #f05a7fc2 !important;
+}
+
+// Skilllllllllllllllllllll
+
+.progress{
+   
+    --bs-progress-bar-bg: #F05A7F;
+    height:8px;
+    padding-left: 0 !important;
+    background-color: #333333;
+    border-radius: 0;
+}
+.procc{
+    // background-color: #000000;
+    // margin: 0 !important;
+    margin: 30px;
+    margin-left: 0;
+}
+.skil{
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #e9e8e8;
+}
+
+#b90{
+    width: 90%;
+}
+#b80{
+    width: 80%;
+}
+#b85{
+    width: 85%;
+}
