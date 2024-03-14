@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:'projects',component:MyprojectsComponent},
   {path:'about',component:AboutComponent},
   {path:'services',component:ServicesComponent},
+  {path:'**', redirectTo:''}
 ];
 
 @NgModule({
