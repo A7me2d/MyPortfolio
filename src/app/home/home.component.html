@@ -9,10 +9,10 @@
         <div class="cont d-flex align-items-center">
            
                 <div class="row d-inline-block">
-                
+                <!-- <img src="../../assets/image/goat2.webp" class="w-100" /> -->
                     <div class="col-lg-6">
-                        <video autoplay loop muted [muted]="'muted'" src="assets/image/video.mp4" class="w-100" id="one"></video>
-                        <video autoplay loop muted [muted]="'muted'" src="assets/image/video2.mp4" class="w-100 d-none" id="two"></video>
+                        <video autoplay loop [playsInline]="true" playsinline muted [muted]="'muted'" src="assets/image/video.mp4" class="w-100" id="one"></video>
+                        <video autoplay loop [playsInline]="true" playsinline muted [muted]="'muted'" src="assets/image/video2.mp4" class="w-100 d-none" id="two"></video>
                     </div>
                     <div class="col-lg-6">
                         <div data-aos="fade-right"
@@ -56,7 +56,7 @@
         <div class="container">
             <div data-aos="zoom-in-down"
             data-aos-duration="1000"
-            class="text-light text-center w-50 m-auto">
+            class="text-light text-center w-75 m-auto">
                 <p>We ❤️ digital. We’ve spent our careers building it. Line by line, deliverable by deliverable and project by project. Take a look at our work and you’ll see how we are helping our partners lay the groundwork for the future of digital.</p>
                </div>
         </div>
