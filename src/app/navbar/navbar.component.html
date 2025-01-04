@@ -3,7 +3,7 @@
         <a class="navbar-brand " href="#">
             <h2 class="me-1 colorh1">Ahmed <span class="ms-1 colorh2 fa-x"></span></h2>
         </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+        <button class="navbar-toggler d-lg-none"  type="button" data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
             aria-label="Toggle navigation">
             <div class="d-flex">
@@ -11,7 +11,7 @@
                 <span class="navbar-toggler-icon"></span>
             </div>  
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <div class="collapse navbar-collapse"  id="collapsibleNavId" [ngClass]="{ 'content': isCollapsed }">
             <ul class="navbar-nav m-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>

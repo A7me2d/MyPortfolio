@@ -17,6 +17,7 @@ a{
     height: 2px;
     width: 100%;
     background-color: #F05A7F;
+    transition: all 3.5s !important;
 }
 
 .nav-link::after{
@@ -24,12 +25,17 @@ a{
     transition: transform all 3.5s !important;
 }
 
-// .colorh2{
-//     font-family: "Merienda", cursive;
-//     color: #F05A7F;
-// }
-
-// .colorh1{
-//     font-family:Arial, Helvetica, sans-serif;
-//     color: #F05A7F;
-// }
+.content{
+    background-color: #1a1919b4 !important;  
+    padding: 40px !important;
+    transition: all  2s !important;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+     --bs-gutter-x: 0 !important; 
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}

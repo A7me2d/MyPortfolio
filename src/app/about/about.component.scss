@@ -56,6 +56,21 @@ h3{
     font-family: "Poppins", sans-serif;
 }
 
+.firstxt{
+    // display: flex;
+    font-size: 24px;
+    font-weight: 500;
+   
+    padding-top: 10px;
+    line-height: 1px;
+    // margin: 30px 30px 30px 30px;
+   margin-top: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+}
+
 
 // factssssssssssssssssssss
 
@@ -136,4 +151,10 @@ h3{
 }
 #b85{
     width: 85%;
+}
+#b75{
+    width: 75%;
+}
+#b95{
+    width: 95%;
 }
