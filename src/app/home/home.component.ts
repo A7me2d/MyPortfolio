@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as Aos from 'aos';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   isHidden: boolean = false;
   data: any[] = [];
 
-  constructor(private viewportScroller: ViewportScroller) { }
+  constructor(private http: HttpClient, private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
     Aos.init();
@@ -25,6 +25,8 @@ export class HomeComponent implements OnInit {
 
   loadData(): void {
     this.isLoading = true; 
+    console.log(this.isHidden);
+    console.log(this.isLoading);
     setTimeout(() => {
       this.isHidden = true; 
       setTimeout(() => {

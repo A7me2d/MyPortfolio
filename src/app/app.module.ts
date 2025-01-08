@@ -7,12 +7,16 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MyprojectsComponent } from './myprojects/myprojects.component';
 import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MyprojectsComponent,
+    AboutComponent,
+    HomeComponent,
     ServicesComponent
   ],
   imports: [
