@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as Aos from 'aos';
 import { HttpClient } from '@angular/common/http';
-
+import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,11 +13,12 @@ export class HomeComponent implements OnInit {
   isHidden: boolean = false;
   data: any[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
     Aos.init();
     this.loadData(); 
+    this.viewportScroller.scrollToPosition([0, 0]);
     this.hideVideosBasedOnScreenWidth(); 
     this.typeEffect();
   }

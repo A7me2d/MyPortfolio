@@ -16,11 +16,11 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
-    this.checkScreenSize(); // التحقق عند تحميل الصفحة لأول مرة
+    this.checkScreenSize();
   }
 
   private checkScreenSize() {
     const screenWidth = window.innerWidth;
-    this.isCollapsed = screenWidth < 768; // إضافة الكلاس عند عرض الشاشة أقل من 768px
+    this.isCollapsed = screenWidth < 768; 
   }
 }

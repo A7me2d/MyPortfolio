@@ -7,32 +7,29 @@ a{
 .active::after {
     content: '';
     display: block;
-    width: 100%; /* التأكد أن العرض يظل مثبتًا */
+    width: 100%; 
     height: 2px;
     background-color: #F05A7F;
-    transition: all 0.3s ease; /* انتقال سلس */
+    transition: all 0.3s ease; 
 }
 
-/* تأثير عند التمرير (hover) */
 .nav-link:hover::after {
     content: '';
     display: block;
     height: 2px;
     width: 100%;
     background-color: #F05A7F;
-    transition: all 0.8s ease; /* تأثير عند التمرير */
+    transition: all 0.8s ease; 
 }
 
-/* إزالة التأثير عند العناصر غير النشطة */
 .nav-link:not(.active)::after {
     content: '';
-    width: 0%; /* فقط العناصر غير النشطة تبدأ بـ 0% */
+    width: 0%; 
     height: 2px;
     background-color: #F05A7F;
     transition: all 0.8s ease;
 }
 
-/* إضافة التأثير عند النقر (active) */
 .nav-link:active::after {
     content: '';
     display: block;
@@ -40,12 +37,6 @@ a{
     width: 100%;
     background-color: #F05A7F;
 }
-
-// .content{
-//     background-color: #1a1919b4 !important;  
-//     padding: 40px !important;
-//     transition: all  2s !important;
-// }
 
 .navbar{
     background-color: #1a1919b4 !important;

@@ -13,23 +13,19 @@
 
 .container{
     border-radius: 10px;
-    // padding: 20px;
     background-color: rgba(66, 66, 66, 0.329);
 }
    
 
 .firsttxt::after{
-    // display: flex;
     content: "";
     display: block;
     width: 100px;
     height: 1px;
     margin-left: 12px;
     background-color: #F05A7F;
-    // margin-top: 10px;
 }
 .firsttxt{
-    // display: flex;
     font-size: 14px;
     font-weight: 500;
     padding-top: 10px;
