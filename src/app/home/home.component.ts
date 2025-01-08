@@ -6,8 +6,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss',
-              './homestyle2.scss',
-              './homestyle3.scss']
+              './homestyle2.scss']
 })
 export class HomeComponent implements OnInit {
   isLoading: boolean = false;
