@@ -1,13 +1,26 @@
 .back {
   background-image: url(../../assets/image/bg.jpg);
   width: 100%;
-  height: 230vh;
+  // height: 300vh;
   z-index: -100;
   background-size: cover;
 }
   
+.sec-four{
+margin-bottom: 100px;
+}
 
+.text-head::after{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #F05A7F;
+  margin: auto;
+}
 
+.sectwo{
+margin-bottom: 100px;}
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -15,19 +28,15 @@
   width: 100%;
   height: 100%;
   background-color: rgba(226, 226, 226, 0.623);
-  /* Semi-transparent white background */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  /* Ensure it appears above other elements */
 }
 
 .loading-spinner {
   font-size: 40px;
-  /* Adjust size as needed */
   color: #333;
-  /* Adjust color as needed */
 }
 
 
@@ -35,23 +44,14 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 800;
   position: absolute;
-  // text-align: start;
-  // bottom: 0;
   z-index: 100;
   top: 300px;
-  // left: 300px;
-  // background: rgb(184, 79, 79);
-  // color: #c03c59 !important;
-  // width: 20%;
-  // padding: 20px;
 }
 
 video {
-  // background-color: green;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  // z-index: -50;
   background-position: 50%;
   background-size: cover;
   margin: auto;
@@ -64,14 +64,7 @@ video {
 
 .cont {
   height: 100vh;
-  // background-color: rgb(54, 54, 28);
-
 }
-
-
-
-
-
 
 h2 {
   font-family: "Merienda", cursive;
@@ -148,7 +141,6 @@ li a:hover {
   content: '';
   display: block;
   height: 2px;
-  // margin-left: 10px;
   margin-top: 2px;
   width: 100%;
   background-color: #F05A7F;
@@ -203,19 +195,14 @@ li a:hover {
 
 .typing-container {
   display: flex;
-  // justify-content: center;
-
   align-items: center;
   height: 60px;
-  /* يحدد المساحة الثابتة */
   overflow: hidden;
-  /* يمنع النص من التحرك خارج الإطار */
 }
 
 .typing-effect {
   font-size: 3rem;
   font-weight: bold;
-  // color: #bd2a6e;
   background: linear-gradient(to right, #ff0077, #0004ff);
   background-clip: text;
   -webkit-background-clip: text;
@@ -232,10 +219,8 @@ li a:hover {
   margin-left: 6px;
   background: linear-gradient(to right, #ff0077, #ff00ea);
   animation: blink 0.8s steps(1) infinite;
-  /* وميض المؤشر */
 }
 
-/* تأثير الوميض لمؤشر الكتابة */
 @keyframes blink {
   0% {
     opacity: 1;
@@ -264,10 +249,8 @@ li a:hover {
 .wave {
   display: inline-block;
   animation: wave 1s ease-in-out infinite;
-  /* حركة اليد */
 }
 
-/* حركة اليد */
 .welcome-container {
   display: flex;
   align-items: center;
@@ -281,46 +264,37 @@ li a:hover {
 .wave {
   display: inline-block;
   transform-origin: 70% 70%;
-  /* نقطة الدوران أكثر قربًا من قاعدة اليد */
   animation: realisticWave 2s ease-in-out infinite;
-  /* حركة أكثر نعومة */
 }
 
-/* حركة اليد الواقعية */
 @keyframes realisticWave {
   0% {
     transform: rotate(0deg);
-    /* الوضع الطبيعي */
   }
 
   10% {
     transform: rotate(-20deg);
-    /* دوران لليمين */
   }
 
   20% {
     transform: rotate(10deg);
-    /* دوران لليسار */
   }
 
   30% {
     transform: rotate(-10deg);
-    /* دوران بسيط لليمين */
   }
 
   40% {
     transform: rotate(5deg);
-    /* دوران خفيف لليسار */
   }
 
   50% {
     transform: rotate(0deg);
-    /* العودة للوضع الطبيعي */
   }
 
   100% {
     transform: rotate(0deg);
-    /* تبقى اليد ثابتة لبقية المدة */
   }
 
 }
+
