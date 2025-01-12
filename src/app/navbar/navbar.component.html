@@ -5,13 +5,13 @@
         </a>
         <button class="navbar-toggler d-lg-none"  type="button" data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
             <div class="d-flex">
-                <h3 class="me-2 ">MENU</h3>
+                <h3 class="me-2">MENU</h3>
                 <span class="navbar-toggler-icon"></span>
             </div>  
         </button>
-        <div class="collapse navbar-collapse"  id="collapsibleNavId" [ngClass]="{ 'content': isCollapsed }">
+        <div class="collapse navbar-collapse" id="collapsibleNavId" [ngClass]="{ 'show': !isCollapsed }">
             <ul class="navbar-nav m-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
@@ -25,7 +25,6 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
                 </li>
-                
             </ul>
             <a href="https://github.com/A7me2d">
                 <i class="fa-brands fa-github text-light fa-2x"></i>

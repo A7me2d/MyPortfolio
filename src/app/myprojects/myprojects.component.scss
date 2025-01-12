@@ -39,7 +39,6 @@
 
 
 .detels{
-    text-align: center;
     background: rgba(204, 204, 204, 0.1);
     padding: 80px 20px;
     transition: all ease-in-out 0.3s;
@@ -85,10 +84,40 @@
 
 
 img {
-    border-radius: 40px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 
 .btn-primary{
+   text-align: center;
    background-color: #78122c !important;
    border: #47121f !important;
 }
+
+h1{
+margin: 30px 0px;
+color: #F05A7F;
+font-family: "Merienda", cursive;
+font-size: 20px;
+font-weight: 500;
+
+}
+
+h4{
+font-size: 16px;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+font-weight: 500;
+color: #cccccc;
+}
+
+p{
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color:#cccccc ;
+}
+
