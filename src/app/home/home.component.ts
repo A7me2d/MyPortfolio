@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/next';
 import { Component, OnInit, HostListener } from '@angular/core';
 import * as Aos from 'aos';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
