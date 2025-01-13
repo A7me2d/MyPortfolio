@@ -9,73 +9,131 @@
   border-radius: 12px;
   transition: transform 0.1s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
-  perspective: 1000px; 
+  perspective: 1000px;
 
-img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  transition: all 0.3s ease-in-out; /* انتقالات سلسة للخصائص */
-}
-
-/* تأثير الحدود والشادو عند التفاعل */
-img:hover {
-  box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.5); /* تأثير شادو متحرك */
-}
-
-img::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 12px;
-  background: none;
-  // box-shadow: 0 0 0 2px #00ff00; /* لون الشادو الأساسي */
-  z-index: -1; /* وضع الشادو خلف الصورة */
-  transition: box-shadow 0.3s ease-in-out;
-}
-img:hover::before {
-  box-shadow: 0 0 10px 5px rgba(255, 0, 191, 0.7); /* تغيير تأثير الشادو عند التحويم */
-  animation: moveBorder 2s linear infinite; /* الأنيميشن للحركة */
-}
-
-@keyframes moveShadow {
-  0% {
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.5);
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+    /* انتقالات سلسة للخصائص */
   }
-  50% {
-    box-shadow: 0px 0px 30px 10px rgba(255, 0, 157, 0.7);
+
+  /* تأثير الحدود والشادو عند التفاعل */
+  img:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 255, 0, 0.5);
+    /* تأثير شادو متحرك */
   }
-  100% {
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.5);
+
+  img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: none;
+    // box-shadow: 0 0 0 2px #00ff00; /* لون الشادو الأساسي */
+    z-index: -1;
+    /* وضع الشادو خلف الصورة */
+    transition: box-shadow 0.3s ease-in-out;
   }
+
+  img:hover::before {
+    box-shadow: 0 0 10px 5px rgba(255, 0, 191, 0.7);
+    /* تغيير تأثير الشادو عند التحويم */
+    animation: moveBorder 2s linear infinite;
+    /* الأنيميشن للحركة */
+  }
+
+  @keyframes moveShadow {
+    0% {
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.5);
+    }
+
+    50% {
+      box-shadow: 0px 0px 30px 10px rgba(255, 0, 157, 0.7);
+    }
+
+    100% {
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 255, 0.5);
+    }
+  }
+
+  img:hover {
+    animation: moveShadow 2s infinite;
+  }
+
 }
 
-img:hover {
-  animation: moveShadow 2s infinite; 
-}
 
-}
-
-
-.text-about{
+.text-about {
   font-size: 20px;
   font-weight: 500;
   line-height: 40px;
   padding-bottom: 30px;
-  span{
+
+  span {
+    color: #F05A7F;
+  }
+
+  .text-head {
+    font-family: "Merienda", cursive;
+    font-size: 35px;
+    font-weight: 500;
+  }
+}
+
+.list {
+  top: 75px;
+  right: -220px;
   color: #F05A7F;
+  font-size: 20px;
+  position: absolute;
+  transition: all 1.5s;
+
+  i {
+    font-size: 15px;
+    background-color: rgb(78, 78, 73);
+    padding: 10px;
+    border-radius: 50%;
+  }
 }
-.text-head{
-  font-family: "Merienda", cursive;
-  font-size: 35px;
-  font-weight: 500;
+
+ul {
+  gap: 5px;
 }
+
+.backicon {
+  top: -50px;
+  right: -50px;
+  position: absolute;
+  border-radius: 50%;
+  height: 0px;
+  width: 0px;
+  transition: all 1s;
 }
+
+img:hover ~ .backicon,
+.backicon:hover {
+  background-color: transparent;
+  height: 280px;
+  top: -50px;
+  right: -50px;
+  width: 280px;
+  backdrop-filter: blur(60px);
+}
+
+img:hover ~ .list,
+.backicon:hover ~ .list,
+.list:hover {
+  right: 10px;
+}
+
+
 
