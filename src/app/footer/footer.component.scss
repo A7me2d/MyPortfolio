@@ -1,29 +1,33 @@
 footer {
-    background-color: rgb(88, 7, 48); /* الخلفية باللون المختار */
-    color: aliceblue; /* النص باللون الأبيض */
-    padding: 20px 0; /* إضافة مسافة بين العناصر */
-    text-align: center; /* محاذاة النص في المنتصف */
+    background-color: #1b0511;
+    background: blur(50px);
+    color: aliceblue;
+    padding: 20px 0;
+    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة تأثير ظل خفيف للفوتر */
     position: relative; /* لجعل الفوتر يبقى ثابتًا في أسفل الصفحة */
     z-index: 1000; /* التأكد من أن الفوتر في المقدمة */
 }
 
 footer .container {
+    
     max-width: 1200px; /* تحديد عرض الحاوية */
     margin: 0 auto; /* محاذاة الحاوية في المنتصف */
 }
 
 footer .row {
     display: flex;
-    justify-content: space-between; /* توزيع العناصر بالتساوي */
-    align-items: center;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
-footer .col-sm-6 {
-    flex: 1;
-}
+// footer .col-sm-6 {
+//     flex: 1;
+// }
 
 footer p {
+    font-size: 16px !important;
+    font-weight: 700;
     margin: 0;
     font-size: 14px; /* تقليل حجم الخط قليلاً ليبدو أكثر توازناً */
     font-family: 'Arial', sans-serif; /* تغيير الخط إلى خط أكثر حداثة */
@@ -47,10 +51,7 @@ footer a:hover {
     color: #ff5e5e; /* تغيير اللون عند التمرير على الرابط */
 }
 
-footer .col-sm-6:first-child {
-    text-align: left; /* محاذاة النص في الجانب الأيسر */
-}
+li{
 
-footer .col-sm-6:last-child {
-    text-align: right; /* محاذاة النص في الجانب الأيمن */
+font-size: 20px !important;
 }
