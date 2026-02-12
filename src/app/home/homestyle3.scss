@@ -137,3 +137,24 @@ img:hover ~ .list,
 
 
 
+
+.typing-effect {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(96, 165, 250), rgb(192, 132, 252));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 6px;
+  background: linear-gradient(to right, rgb(96, 165, 250), rgb(192, 132, 252));
+  animation: blink 0.8s steps(1) infinite;
+}

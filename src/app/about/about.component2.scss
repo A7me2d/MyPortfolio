@@ -1,0 +1,343 @@
+$primary-color: rgb(96, 165, 250);
+$secondary-color: rgb(192, 132, 252);
+$dark-bg: #0a0a0a;
+$glass-bg: rgba(255, 255, 255, 0.05);
+$transition-speed: 0.3s;
+// Timeline Section
+.timeline-section {
+    margin-bottom: 4rem;
+
+    .section-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &::before {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(180deg, $primary-color, $secondary-color);
+            border-radius: 2px;
+        }
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 2rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, $primary-color, $secondary-color, transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+
+            .timeline-dot {
+                position: absolute;
+                top: 0;
+                left: -2.4rem;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: $primary-color;
+                border: 3px solid $dark-bg;
+                box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+            }
+
+            .timeline-content {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 15px;
+                padding: 1.5rem;
+                transition: all $transition-speed ease;
+
+                &:hover {
+                    transform: translateX(5px);
+                    border-color: $primary-color;
+                    box-shadow: 0 5px 20px rgba(96, 165, 250, 0.2);
+                }
+
+                .timeline-date {
+                    display: inline-block;
+                    padding: 0.25rem 0.75rem;
+                    background: linear-gradient(135deg, $primary-color, $secondary-color);
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 0.75rem;
+                }
+
+                .timeline-title {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-bottom: 0.25rem;
+                }
+
+                .timeline-company {
+                    font-size: 1rem;
+                    color: $primary-color;
+                    margin-bottom: 0.75rem;
+                }
+
+                .timeline-description {
+                    font-size: 0.95rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+// Achievements Section
+.achievements-section {
+    .section-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &::before {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(180deg, $primary-color, $secondary-color);
+            border-radius: 2px;
+        }
+    }
+
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .achievement-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: all $transition-speed ease;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, $primary-color, $secondary-color);
+            transform: scaleX(0);
+            transition: all $transition-speed ease;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            border-color: $primary-color;
+            box-shadow: 0 15px 40px rgba(96, 165, 250, 0.3);
+
+            &::before {
+                transform: scaleX(1);
+            }
+
+            .achievement-icon {
+                transform: scale(1.1) rotate(10deg);
+            }
+        }
+
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(192, 132, 252, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: $primary-color;
+            transition: all $transition-speed ease;
+        }
+
+        .achievement-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .achievement-description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-date {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+// Copy Notification
+.copy-notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(240, 90, 127, 0.4);
+    z-index: 10000;
+    animation: slideUp 0.3s ease;
+}
+
+// Animations
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes gradientGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+// RTL Support
+[dir="rtl"] {
+    .timeline {
+        padding-left: 0;
+        padding-right: 2rem;
+
+        &::before {
+            left: auto;
+            right: 0;
+        }
+
+        .timeline-item {
+            padding-left: 0;
+            padding-right: 2rem;
+
+            .timeline-dot {
+                left: auto;
+                right: -2.4rem;
+            }
+
+            .timeline-content {
+                &:hover {
+                    transform: translateX(-5px);
+                }
+            }
+        }
+    }
+
+    .info-card {
+        .copy-icon {
+            right: auto;
+            left: 0;
+            transform: translateX(-10px);
+
+            &:hover {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 767px) {
+    #about {
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        .container {
+            padding: 1.5rem;
+        }
+    }
+
+    .about-hero {
+        gap: 2rem;
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+
+    .profile-card {
+        .profile-image-wrapper {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}

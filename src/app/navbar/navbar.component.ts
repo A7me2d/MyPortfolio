@@ -12,7 +12,7 @@ interface NavItem {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss' ,'./navbar.component2.scss']
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   isCollapsed = true;

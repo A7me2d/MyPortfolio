@@ -277,3 +277,35 @@ nav a:hover {
     opacity: 1;
   }
 }
+
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1s ease-in-out infinite;
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: realisticWave 2s ease-in-out infinite;
+}

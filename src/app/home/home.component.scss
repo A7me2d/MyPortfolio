@@ -252,26 +252,6 @@ li a:hover {
   overflow: hidden;
 }
 
-.typing-effect {
-  font-size: 3rem;
-  font-weight: bold;
-  background: linear-gradient(to right, rgb(96, 165, 250), rgb(192, 132, 252));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-
-.cursor {
-  display: inline-block;
-  width: 3px;
-  margin-left: 6px;
-  background: linear-gradient(to right, rgb(96, 165, 250), rgb(192, 132, 252));
-  animation: blink 0.8s steps(1) infinite;
-}
 
 @keyframes blink {
   0% {
@@ -288,36 +268,6 @@ li a:hover {
 }
 
 
-.welcome-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.wave {
-  display: inline-block;
-  animation: wave 1s ease-in-out infinite;
-}
-
-.welcome-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.wave {
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: realisticWave 2s ease-in-out infinite;
-}
 
 @keyframes realisticWave {
   0% {
