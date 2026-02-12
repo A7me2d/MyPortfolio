@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslationService } from '../services/translation.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   currentDate: string;
 
-  constructor() {
+  constructor(private translationService: TranslationService) {
     // مصفوفة تحتوي على أسماء الأشهر
     const monthNames = [
       'January', 'February', 'March', 'April', 'May', 'June',
@@ -22,6 +23,10 @@ export class FooterComponent implements OnInit {
 
     // تنسيق التاريخ ليظهر كـ "اليوم/اسم الشهر/السنة"
     this.currentDate = `${day} ${monthNames[month]} ${year}`;
+  }
+
+  t(key: string): string {
+    return this.translationService.getTranslation(key);
   }
 
   ngOnInit(): void {}
