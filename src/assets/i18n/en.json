@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "search": "Search..."
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "LEARN MORE ABOUT ME",
+    "role": "Full-Stack Developer",
+    "description": "Versatile full-stack developer with a Computer Science degree, skilled in .NET, Angular, HTML, CSS, and JavaScript. Excels in creating dynamic web applications with seamless user interactions, leveraging advanced Angular methodologies for scalable, maintainable, and high-performance solutions. Proficient in developing robust back-end systems with .NET to complement intuitive front-end designs. Known for creative problem-solving and committed to continuous innovation in full-stack development, combining expertise in .NET and Angular technologies.",
+    "name": "Name:",
+    "nameValue": "Ahmed Hany Makram",
+    "birthday": "Birthday:",
+    "birthdayValue": "11 May 2000",
+    "phone": "Phone:",
+    "phoneValue": "+201285033997",
+    "city": "City:",
+    "cityValue": "Cairo,Egypt",
+    "age": "Age:",
+    "ageValue": "24",
+    "degree": "Degree:",
+    "degreeValue": "Bachelor",
+    "email": "Email:",
+    "emailValue": "ahmed.karim524382",
+    "freelance": "Freelance:",
+    "freelanceValue": "Available",
+    "skills": "SKILLS",
+    "frontend": "Frontend",
+    "backend": "BackEnd",
+    "all": "All",
+    "personalInfo": "Personal Information",
+    "downloadResume": "Download Resume",
+    "experience": "Experience",
+    "education": "Education",
+    "achievements": "Achievements",
+    "experience1": {
+      "date": "Nov 2024 - Present",
+      "title": "Front-End Developer",
+      "company": "Cloud4Rain",
+      "description": "Led front-end development for large-scale government and enterprise systems including Administrative Prosecution, Court of Cassation, Cairo Court of Appeal, and State Lawsuits Authority. Implemented Training System with media management, refactored projects into Micro-Frontend architecture using Nx, built ERP system with multi-tenant support using Angular 20. Applied RxJS and NgRx for state management, optimized performance with OnPush change detection, and delivered RTL-compatible interfaces from Figma designs."
+    },
+    "experience2": {
+      "date": "Feb 2023 - Feb 2024",
+      "title": "Teaching Assistant",
+      "company": "Higher Technological Institute - Beni Suef",
+      "description": "Mentored 200+ students providing academic support, improving grades by 20%. Developed and graded 50+ assignments and exams with timely feedback. Trained 80+ students who achieved top positions in programming competitions through Frontend and Database coaching."
+    }
+  },
+  "home": {
+    "welcome": "Welcome",
+    "iam": "I`am",
+    "name": "Ahmed Hany.",
+    "tagline": "You name it. Weve built it.",
+    "storyTitle": "I WILL SHARE MY STORY",
+    "storyParagraph1": "From a strong passion for technology, my journey evolved into an appreciation for programming as a powerful means to tackle challenges and develop creative, forward-thinking solutions.",
+    "storyParagraph2": "I specialize in programming languages such as JavaScript, TypeScript, C++ , SQL and C#, with a strong focus on developing innovative web technologies and products. Driven by my passion for product development, I leverage ASP.NET Core , ASP.NET MVC alongside cutting-edge JavaScript libraries and frameworks, including Angular (16 & 17).",
+    "storyParagraph3": "I am deeply passionate about creating innovative web technologies and products.",
+    "storyParagraph4": "Currently, I am focused on developing projects with Angular and ASP.NET Core, aiming to deliver seamless and integrated web solutions while continuously enhancing UI design and user experience.",
+    "storyParagraph5": "My programming philosophy emphasizes writing clean, maintainable code that adheres to SOLID principles and object-oriented programming (OOP). I thrive in collaborative team environments, contributing to the creation of innovative and scalable solutions.",
+    "wowExperience": "Think of the last time you were really wowd by a digital experience.",
+    "imagine": "No really, close your eyes and imagine it.",
+    "digitalPassion": "We ❤️ digital. We've spent our careers building it. Line by line, deliverable by deliverable and project by project. Take a look at our work and you'll see how we are helping our partners lay the groundwork for the future of digital."
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "MY SERVICES",
+    "service1": {
+      "title": "Full-Stack Web Development",
+      "description": "Building complete web applications from frontend to backend using .NET and Angular technologies"
+    },
+    "service2": {
+      "title": "Frontend Development",
+      "description": "Creating responsive, interactive user interfaces with Angular, HTML, CSS, and TypeScript"
+    },
+    "service3": {
+      "title": "Backend Development",
+      "description": "Developing robust APIs and server-side logic with ASP.NET Core and .NET"
+    },
+    "service4": {
+      "title": "API Integration",
+      "description": "Connecting applications with third-party services and databases securely"
+    },
+    "service5": {
+      "title": "Web Application Maintenance",
+      "description": "Ongoing support and optimization of web projects for peak performance"
+    },
+    "service6": {
+      "title": "Custom Solutions",
+      "description": "Tailored web applications designed to meet specific business requirements"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "MY MAGIC",
+    "searchPlaceholder": "Search projects...",
+    "all": "All",
+    "ecommerce": "E-Commerce",
+    "tools": "Tools",
+    "webapps": "Web Apps",
+    "viewDetails": "View Details",
+    "techStack": "Tech Stack",
+    "noResults": "No projects found",
+    "project1": {
+      "title": "E-Commerce",
+      "tech": "HYML SCSS TYPESCRIPT ANGULAR Material API BOOTSTRAP JQuery",
+      "name": "MyPop-upSale",
+      "description": "Our commerce project is designed to deliver users an interactive and smooth online shopping experience, taking inspiration from top platforms like Amazon. Developed using HTML, CSS, TypeScript, Angular, Bootstrap, Angular NgxPaginationModule, and NotifierModule, the platform provides a wide range of features for exploring, buying, and organizing products effortlessly.",
+      "github": "GitHub",
+      "live": "Live Magic"
+    },
+    "project2": {
+      "title": "Fixer",
+      "tech": "HYML CSS JAVASCRIPT API BOOTSTRAP JQuery",
+      "name": "Currency Converter",
+      "description": "The Currency Converter is a streamlined web application that simplifies currency exchange using real-time data from the Bank of Egypt API. Designed with a clean and user-friendly interface, the platform allows users to quickly convert between currencies with accurate rates, making it an essential tool for everyday financial transactions.",
+      "security": "Security"
+    },
+    "project3": {
+      "title": "QR Scanner Attendance",
+      "tech": "HYML CSS JAVASCRIPT API BOOTSTRAP JQuery Database Mock API JWT Angular",
+      "name": "Attendance QR System",
+      "description": "The Attendance QR System is an advanced web platform designed for seamless student attendance management using QR codes. With a focus on speed and high responsiveness, the system efficiently integrates with APIs and databases to handle data in real-time. It includes a robust master dashboard for comprehensive control and monitoring, individual sign-in functionality for users, and secure encryption for every email and password, ensuring data privacy and security.",
+      "security": "Security"
+    },
+    "project4": {
+      "title": "Yummy",
+      "tech": "HYML CSS JAVASCRIPT API BOOTSTRAP JQuery AI",
+      "name": "Lets Check The Food",
+      "description": "Yummy is a comprehensive web platform celebrating the art of cooking and culinary exploration. Featuring a rich collection of recipes, meal inspiration, cooking tips, and a thriving community, it is designed to be the ultimate destination for food enthusiasts seeking to create and savor extraordinary dishes.",
+      "github": "GitHub",
+      "live": "Live Magic"
+    },
+    "project5": {
+      "title": "Smart Schedule Manager",
+      "tech": "HYML CSS TYPESCRIPT API BOOTSTRAP JQuery Angular",
+      "name": "Institute Scheduling and Management System",
+      "description": "The Institute Scheduling System is a comprehensive web application developed to manage and organize schedules for professors and teaching assistants. The platform utilizes APIs and a robust database to store and retrieve schedule data efficiently. It features a secure sign-in system, where each account has specific permissions based on user roles. A master account has full control, allowing for modifications to any data. The application also includes a dynamic dashboard that displays the entered information, providing a clear and intuitive overview for efficient management.",
+      "github": "GitHub",
+      "security": "Security"
+    },
+    "project6": {
+      "title": "Weather",
+      "tech": "HYML CSS JAVASCRIPT API BOOTSTRAP AI",
+      "name": "Lets Check The Weather",
+      "description": "The Weather App is a dynamic web application designed to provide users with real-time weather updates and forecasts for various locations. By integrating a weather API, it delivers accurate and up-to-date information through an intuitive and user-friendly interface, enhancing the experience of exploring weather conditions effortlessly.",
+      "github": "GitHub",
+      "live": "Live Magic"
+    }
+  },
+  "footer": {
+    "developedBy": "Developed by",
+    "developerName": "Ahmed Hany",
+    "copyright": "Copyright"
+  }
+}

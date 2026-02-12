@@ -1,300 +1,144 @@
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJPYH5N33P"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-YJPYH5N33P');
 </script>
 
 <div id="about">
-    <div class="container overflow-hidden">
-        <div class="about-section p-3 pb-5 border-bottom">
-            <div class="row">
-                <p class="fw-bold firsttxt d-flex align-items-center">About</p>
-                <h2 class="fw-bold letter mb-4">LEARN MORE ABOUT ME</h2>
-                <div class="col-lg-4">
-
-                    <img src="assets/image/2.jpg" class="w-100" alt="">
+    <div class="meteors-container">
+        <span class="meteor" style="top: -5px; left: 199px; animation-delay: 0.648905s; animation-duration: 2s;"></span>
+        <span class="meteor" style="top: -5px; left: 857px; animation-delay: 0.535386s; animation-duration: 8s;"></span>
+        <span class="meteor" style="top: -5px; left: 1161px; animation-delay: 1.12896s; animation-duration: 2s;"></span>
+        <span class="meteor" style="top: -5px; left: 351px; animation-delay: 1.07152s; animation-duration: 4s;"></span>
+        <span class="meteor" style="top: -5px; left: 1048px; animation-delay: 0.636411s; animation-duration: 8s;"></span>
+        <span class="meteor" style="top: -5px; left: 1142px; animation-delay: 0.925166s; animation-duration: 2s;"></span>
+        <span class="meteor" style="top: -5px; left: 554px; animation-delay: 0.948466s; animation-duration: 6s;"></span>
+        <span class="meteor" style="top: -5px; left: 862px; animation-delay: 1.06345s; animation-duration: 7s;"></span>
+        <span class="meteor" style="top: -5px; left: 1356px; animation-delay: 1.05346s; animation-duration: 8s;"></span>
+        <span class="meteor" style="top: -5px; left: 1270px; animation-delay: 1.01339s; animation-duration: 6s;"></span>
+    </div>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="about-hero">
+            <div class="profile-card">
+                <div class="profile-image-wrapper">
+                    <img src="assets/image/2.jpg" alt="Profile" class="profile-image">
+                    <div class="profile-glow"></div>
                 </div>
-                <div class="col-lg-8">
-                    <h3 class="colortext pt-3">Full-Stack Developer</h3>
-                    <P>Versatile full-stack developer with a Computer Science degree, skilled in .NET, Angular, HTML, CSS, and JavaScript. Excels in creating dynamic web applications with seamless user interactions, leveraging advanced Angular methodologies for scalable, maintainable, and high-performance solutions. Proficient in developing robust back-end systems with .NET to complement intuitive front-end designs. Known for creative problem-solving and committed to continuous innovation in full-stack development, combining expertise in .NET and Angular technologies.</P>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span
-                                        class="fw-bold">Name:</span> Ahmed Hany Makram</li>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span
-                                        class="fw-bold">Birthday:</span> 11 May 2000</li>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span
-                                        class="fw-bold">Phone:</span> +201285033997</li>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span class="fw-bold">City:</span>
-                                    Cairo,Egypt</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span class="fw-bold">Age:</span>
-                                    24</li>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span
-                                        class="fw-bold">Degree:</span> Bachelor</li>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span
-                                        class="fw-bold">Email:</span> ahmed.karim524382<span class="gmail">&#64;gmail.com</span></li>
-                                <li><i class="fa fa-chevron-right pe-2 colortext"></i><span
-                                        class="fw-bold">Freelance:</span> Available</li>
-                            </ul>
-                        </div>
+                <div class="social-links">
+                    <a href="https://github.com/A7me2d" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="about-content">
+                <p class="section-label">{{ t('about.title') }}</p>
+                <h1 class="section-title">{{ t('about.subtitle') }}</h1>
+                <h2 class="role-title">{{ t('about.role') }}</h2>
+                <p class="description">{{ t('about.description') }}</p>
+                <button class="btn-download-resume" (click)="downloadResume()">
+                    <i class="fa-solid fa-download"></i>
+                    {{ t('about.downloadResume') }}
+                </button>
+            </div>
+        </div>
+
+        <!-- Personal Info Section -->
+        <div class="info-section">
+            <h3 class="section-heading">{{ t('about.personalInfo') }}</h3>
+            <div class="info-grid">
+                <div class="info-card" *ngFor="let info of personalInfo" (click)="copyToClipboard(info.value)">
+                    <div class="info-icon">
+                        <i [class]="info.icon"></i>
+                    </div>
+                    <div class="info-content">
+                        <span class="info-label">{{ t(info.label) }}</span>
+                        <span class="info-value">{{ t(info.value) }}</span>
+                        <i class="fa-regular fa-copy copy-icon"></i>
                     </div>
                 </div>
             </div>
         </div>
-<!-- <div class="row text-center p-4 mt-5">
-    <p class="fw-bold firsttxt d-flex align-items-center">Facts</p>
-    <p class="text-start">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p>
 
-    <div class="col-lg-3 col-sm-6 col-6 p-4 ">
-        <h2 class="fw-bold p-5 abs">
-            <i id="icon" class="fa-regular fa-face-smile"></i>
-            262
-            <p class="fs-6 lead pt-2">Happy Clients consequuntur quae</p>
-        </h2>
-    </div>
-    <div class="col-lg-3 col-sm-6 col-6 p-4 ">
-        <h2 class="fw-bold p-5 abs">
-            <i id="icon" class="fa-solid fa-book-bookmark"></i>
-            521
-            <p class="fs-6 lead pt-2">Projects adipisci atque cum quia aut</p>
-        </h2>
-    </div>
-    <div class="col-lg-3 col-sm-6 col-6 p-4 ">
-        <h2 class="fw-bold p-5 abs">
-            <i id="icon" class="fa-solid fa-headphones"></i>
-            1453
-            <p class="fs-6 lead pt-2">Hours Of Support aut commodi quaerat</p>
-        </h2>
-    </div>
-    <div class="col-lg-3 col-sm-6 col-6 p-4 ">
-        <h2 class="fw-bold p-5 abs">
-            <i id="icon" class="fa-solid fa-users"></i>
-                        32
-            <p class="fs-6 lead pt-2">Hard Workers adipisci atque cum quia aut</p>
-        </h2>
-    </div>
-
-</div> -->
-        <div class="skill-section p-3 pt-5">
-            <h3 class="fw-bold firsttxt d-flex align-items-center">SKILLS</h3>
-            <div class="row">
-                <div class="col-6">
-            <h3 class="fw-bold firstxt d-flex align-items-center">Frontend</h3>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">Angular</p>
-                            <p class="skil">100%</p>
+        <!-- Skills Section -->
+        <div class="skills-section">
+            <h3 class="section-heading">{{ t('about.skills') }}</h3>
+            <div class="skills-filter">
+                <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="filterSkills('all')">{{ t('about.all') }}</button>
+                <button class="filter-btn" [class.active]="activeFilter === 'frontend'" (click)="filterSkills('frontend')">{{ t('about.frontend') }}</button>
+                <button class="filter-btn" [class.active]="activeFilter === 'backend'" (click)="filterSkills('backend')">{{ t('about.backend') }}</button>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" *ngFor="let skill of filteredSkills" [attr.data-category]="skill.category" data-aos="fade-up">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i [class]="skill.icon"></i>
                         </div>
-
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div
-                            data-aos="fade-right"
-                            class="progress-bar w-100"></div>
+                        <div class="skill-info">
+                            <span class="skill-name">{{ skill.name }}</span>
+                            <span class="skill-percentage">{{ skill.percentage }}%</span>
                         </div>
                     </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">HTML</p>
-                            <p class="skil">100%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="95"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div
-                            data-aos="fade-right"
-                            class="progress-bar w-100"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">CSS</p>
-                            <p class="skil">90%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="95"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b90"
-                            data-aos="fade-right"
-                            class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">SCSS</p>
-                            <p class="skil">90%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="95"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b90"
-                            data-aos="fade-right"
-                            class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">BOOTSTRAP</p>
-                            <p class="skil">100%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div
-                            data-aos="fade-right"
-                            class="progress-bar w-100"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">JAVASCRIPT</p>
-                            <p class="skil">95%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b95"
-                            data-aos="fade-right"
-                            class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">Jquery</p>
-                            <p class="skil">80%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b80"
-                            data-aos="fade-right"
-                            class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">ES6</p>
-                            <p class="skil">80%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b80"
-                            data-aos="fade-right"
-                            class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">typescript</p>
-                            <p class="skil">90%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b90"
-                            data-aos="fade-right"
-                            class="progress-bar"></div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-6">
-                              <h3 class="fw-bold firstxt">BackEnd</h3>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">SQL</p>
-                            <p class="skil">90%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="95"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b90"
-                            data-aos="fade-right"
-                             class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">C#</p>
-                            <p class="skil">70%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div data-aos="fade-right" class="progress-bar w-75"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">OOP</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">LINQ</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">ADO.NET</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">MVC</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">APIs</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">Signalr</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
-                    </div>
-                    <div class="procc">
-                        <div class="fg d-flex justify-content-between">
-                            <p class="skil">AzureDevOps</p>
-                            <p class="skil">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100">
-                            <div id="b85" data-aos="fade-right" class="progress-bar"></div>
-                        </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" [style.width.%]="skill.percentage"></div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Experience Timeline -->
+        <div class="timeline-section">
+            <h3 class="section-heading">{{ t('about.experience') }}</h3>
+            <div class="timeline">
+                <div class="timeline-item" *ngFor="let exp of experiences" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">{{ t(exp.date) }}</span>
+                        <h4 class="timeline-title">{{ t(exp.title) }}</h4>
+                        <p class="timeline-company">{{ t(exp.company) }}</p>
+                        <p class="timeline-description">{{ t(exp.description) }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Timeline -->
+        <div class="timeline-section education">
+            <h3 class="section-heading">{{ t('about.education') }}</h3>
+            <div class="timeline">
+                <div class="timeline-item" *ngFor="let edu of education" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">{{ edu.date }}</span>
+                        <h4 class="timeline-title">{{ edu.degree }}</h4>
+                        <p class="timeline-company">{{ edu.institution }}</p>
+                        <p class="timeline-description">{{ edu.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="achievements-section">
+            <h3 class="section-heading">{{ t('about.achievements') }}</h3>
+            <div class="achievements-grid">
+                <div class="achievement-card" *ngFor="let achievement of achievements" data-aos="zoom-in">
+                    <div class="achievement-icon">
+                        <i [class]="achievement.icon"></i>
+                    </div>
+                    <h4 class="achievement-title">{{ achievement.title }}</h4>
+                    <p class="achievement-description">{{ achievement.description }}</p>
+                    <span class="achievement-date">{{ achievement.date }}</span>
+                </div>
+            </div>
+        </div>
     </div>
+</div>

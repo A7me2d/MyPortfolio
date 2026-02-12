@@ -1,34 +1,70 @@
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" [class.scrolled]="isScrolled">
     <div class="container">
-        <a class="navbar-brand " href="#">
-            <h2 class="me-1 colorh1">Ahmed <span class="ms-1 colorh2 fa-x"></span></h2>
+        <!-- Enhanced Brand -->
+        <a class="navbar-brand" href="#">
+            <h2 class="brand-text">
+                <span class="brand-name">Ahmed</span>
+                <span class="brand-accent">Hany</span>
+            </h2>
         </a>
-        <button class="navbar-toggler d-lg-none"  type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-            aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
-            <div class="d-flex">
-                <h3 class="me-2">MENU</h3>
-                <span class="navbar-toggler-icon"></span>
-            </div>  
+
+        <!-- Enhanced Mobile Toggle -->
+        <button class="navbar-toggle-btn d-lg-none" type="button" (click)="toggleMobileMenu()" aria-label="Toggle navigation">
+            <span class="hamburger" [class.active]="!isCollapsed">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId" [ngClass]="{ 'show': !isCollapsed }">
+
+        <!-- Enhanced Navigation -->
+        <div class="navbar-collapse" [class.show]="!isCollapsed && isMobile">
+            <!-- Search Bar -->
+            <!-- <div class="search-container" [class.active]="isSearchActive">
+                <input type="text" [placeholder]="t('navbar.search')" (keyup)="filterNavItems($event)">
+                <button class="search-toggle" (click)="toggleSearch()" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div> -->
+
+            <!-- Nav Links -->
             <ul class="navbar-nav m-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
+                <li class="nav-item" *ngFor="let item of navItems">
+                    <a class="nav-link" [routerLink]="item.link" routerLinkActive="active">
+                        <i class="nav-icon" [class]="item.icon"></i>
+                        <span>{{ t(item.label) }}</span>
+                    </a>
                 </li>
             </ul>
-            <a href="https://github.com/A7me2d">
-                <i class="fa-brands fa-github text-light fa-2x"></i>
-            </a>
+
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <!-- <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon" [class.sun]="!isDarkMode"></i>
+                </button> -->
+
+                <!-- GitHub Link -->
+                <a href="https://github.com/A7me2d" class="github-link" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="tooltip">View on GitHub</span>
+                </a>
+
+                <!-- Language Toggle -->
+                <div class="lang-toggle">
+                    <button class="lang-btn" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')" aria-label="Switch to English">
+                        <span class="lang-icon">🇬🇧</span>
+                        <span>EN</span>
+                    </button>
+                    <button class="lang-btn" [class.active]="currentLang === 'ar'" (click)="switchLanguage('ar')" aria-label="Switch to Arabic">
+                        <span class="lang-icon">🇸🇦</span>
+                        <span>AR</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Mobile Backdrop -->
+    <div class="mobile-backdrop" [class.active]="!isCollapsed && isMobile" (click)="closeMobileMenu()"></div>
 </nav>

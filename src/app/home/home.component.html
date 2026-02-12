@@ -4,6 +4,18 @@
     rel="stylesheet">
 
 <div id="home">
+    <div class="meteors-container">
+        <span class="meteor" style="top: -5px; left: 199px; animation-delay: 0.648905s; animation-duration: 2s;"></span>
+        <span class="meteor" style="top: -5px; left: 857px; animation-delay: 0.535386s; animation-duration: 8s;"></span>
+        <span class="meteor" style="top: -5px; left: 1161px; animation-delay: 1.12896s; animation-duration: 2s;"></span>
+        <span class="meteor" style="top: -5px; left: 351px; animation-delay: 1.07152s; animation-duration: 4s;"></span>
+        <span class="meteor" style="top: -5px; left: 1048px; animation-delay: 0.636411s; animation-duration: 8s;"></span>
+        <span class="meteor" style="top: -5px; left: 1142px; animation-delay: 0.925166s; animation-duration: 2s;"></span>
+        <span class="meteor" style="top: -5px; left: 554px; animation-delay: 0.948466s; animation-duration: 6s;"></span>
+        <span class="meteor" style="top: -5px; left: 862px; animation-delay: 1.06345s; animation-duration: 7s;"></span>
+        <span class="meteor" style="top: -5px; left: 1356px; animation-delay: 1.05346s; animation-duration: 8s;"></span>
+        <span class="meteor" style="top: -5px; left: 1270px; animation-delay: 1.01339s; animation-duration: 6s;"></span>
+    </div>
 
     <div class="back overflow-hidden">
         <div class="imgnewstyley ">
@@ -12,11 +24,7 @@
         </div>
 
         <div class="container" id="textnew">
-            <div class="cont d-flex align-items-center">
-                <div id="rocket">
-                    <i class="fa-solid fa-rocket"></i>
-                    <i class="fa-solid fa-fire"></i>
-                </div>
+            <div class="cont d-flex align-items-center">    
                 <div class="row">
                     <div class="col-lg-12 col-md-6">
                         <video autoplay loop [playsInline]="true" loading="lazy" playsinline muted [muted]="'muted'"
@@ -27,10 +35,10 @@
                     <div data-aos="fade-right" data-aos-duration="3000" class="detels text-white">
                         <p id="ooo" class="fa-3x">
                         <p id="ooo" class="fa-3x">
-                            Welcome
+                            {{ t('home.welcome') }}
                             <span class="wave">👋</span>
                         </p>
-                        <h2 class="fa-3x"> I`am <span id="maintext">Ahmed Hany.</span></h2>
+                        <h2 class="fa-3x"> {{ t('home.iam') }} <span id="maintext">{{ t('home.name') }}</span></h2>
 
 
 
@@ -40,7 +48,7 @@
                                 <span>{{ currentText }}</span><span class="cursor">|</span>
                             </h2>
                         </div>
-                        <p id="oo" class="fa-3x">You name it. Weve built it. <span class="letter-1">❤️</span></p>
+                        <p id="oo" class="fa-3x">{{ t('home.tagline') }} <span class="letter-1">❤️</span></p>
                         <nav>
                             <ul>
                                 <li><a href="https://www.facebook.com/profile.php?id=100006490234174&mibextid=LQQJ4d"><i
@@ -67,31 +75,21 @@
         <div class="container" id="sectionthree">
             <div class="row text-capitalize">
                 <div class="col-lg-8 text-light text-about">
-                    <h1 class="text-head m-4 text-center">I WILL <span>SHARE</span> MY STORY</h1>
+                    <h1 class="text-head m-4 text-center">{{ t('home.storyTitle') }}</h1>
                     <p class="text-about">
-                        From a strong passion for technology, my journey evolved into an appreciation for programming as
-                        a powerful means to tackle challenges and develop creative, forward-thinking solutions.
+                        {{ t('home.storyParagraph1') }}
                     </p>
                     <p class="text-about">
-                        I specialize in programming languages such as<span>JavaScript, TypeScript, C++ , SQL</span> and
-                        <span>C#</span>, with a strong focus on developing innovative web technologies and products.
-                        Driven by my passion for product development, I leverage <span>ASP.NET Core , ASP.NET MVC
-                        </span> alongside
-                        cutting-edge JavaScript libraries and frameworks, including <span>Angular (16 & 17).</span>
+                        {{ t('home.storyParagraph2') }}
                     </p>
                     <p class="text-about">
-                        I am deeply passionate about creating <span>innovative web technologies and products</span>.
+                        {{ t('home.storyParagraph3') }}
                     </p>
                     <p class="text-about">
-                        Currently, I am focused on developing projects with <span>Angular</span> and <span>ASP.NET
-                            Core</span>, aiming to deliver seamless and integrated web solutions while continuously
-                        enhancing UI design and user experience.
+                        {{ t('home.storyParagraph4') }}
                     </p>
                     <p class="text-about">
-                        My programming philosophy emphasizes writing clean, maintainable code that adheres to
-                        <span>SOLID principles</span> and <span>object-oriented programming (OOP)</span>. I thrive in
-                        collaborative team environments, contributing to the creation of innovative and scalable
-                        solutions.
+                        {{ t('home.storyParagraph5') }}
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-7">
@@ -120,20 +118,15 @@
             <div class="sectwo text-light d-flex align-items-center">
                 <div class="container">
                     <p class="mt-5 fa-2x" data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000"
-                        data-aos-easing="ease-in-sine">Think of the last time you were really wowd by a digital
-                        experience.
+                        data-aos-easing="ease-in-sine">{{ t('home.wowExperience') }}
                     </p>
                     <p class="mt-5 fa-2x text-end" data-aos="fade-left" data-aos-offset="300" data-aos-duration="2000"
-                        data-aos-easing="ease-in-sine">No really, close your eyes and imagine it.</p>
+                        data-aos-easing="ease-in-sine">{{ t('home.imagine') }}</p>
                 </div>
             </div>
             <div class="container ">
                 <div data-aos="zoom-in-down" data-aos-duration="1000" class="text-light text-center w-75 m-auto">
-                    <p class="info">We ❤️ digital. We’ve spent our careers building it. Line by line, deliverable by
-                        deliverable and
-                        project by project. Take a look at our work and you’ll see how we are helping our partners lay
-                        the
-                        groundwork for the future of digital.</p>
+                    <p class="info">{{ t('home.digitalPassion') }}</p>
                 </div>
             </div>
 

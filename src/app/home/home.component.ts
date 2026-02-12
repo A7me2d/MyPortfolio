@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import * as Aos from 'aos';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewportScroller } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
 
 
 
@@ -11,7 +12,7 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./home.component.scss', './homestyle2.scss', './homestyle3.scss']
 })
 export class HomeComponent implements OnInit {
-  isLoading: boolean = false;
+  isLoading: boolean = true;
   isHidden: boolean = false;
   data: any[] = [];
   words: string[] = ['Lets make magic ', 'Front-End | Angular ', 'Computer Science', 'Back-End | .NET'];
@@ -22,8 +23,13 @@ export class HomeComponent implements OnInit {
   erasingSpeed: number = 50;
   pauseDuration: number = 1000;
   isErasing: boolean = false;
+  currentLang: string = 'en';
 
-  constructor(private http: HttpClient, private viewportScroller: ViewportScroller) { }
+  constructor(private http: HttpClient, private viewportScroller: ViewportScroller, private translationService: TranslationService) {
+    this.translationService.lang$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
 
   ngOnInit(): void {
     Aos.init();
@@ -125,6 +131,10 @@ initTiltEffect(): void {
   card.addEventListener('mouseleave', () => {
     card.style.transform = `rotateX(0) rotateY(0)`;
   });
+}
+
+t(key: string): string {
+  return this.translationService.getTranslation(key);
 }
 
 

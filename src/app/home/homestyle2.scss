@@ -278,82 +278,34 @@ nav a:hover {
   }
 }
 
-/* تنسيق الصاروخ */
-#rocket {
-  position: fixed;
-  width: 50px;  /* الحجم */
-  height: 50px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: moveAndRotateRocket 10s linear infinite;  /* الأنيميشن للتحرك والدوران */
+
+.welcome-container {
   display: flex;
-  color: #ff0077;
-   font-size: 30px;
-  flex-direction: column;
   align-items: center;
-z-index: 99999999999999999999999999999;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
 }
 
-/* تنسيق النار */
-#rocket .fa-fire {
-  position: absolute;
-  top: 20px;
-  background: linear-gradient(to right, #e5ff00, #ff0000);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  // text-align: center;
-  // white-space: nowrap;
-  font-size: 20px;
-  left: -1px;
-  transform:rotate(220deg);  /* محاذاة النار في المنتصف */
-  // font-size: 25px;
-  animation: flameAnimation 0.5s  infinite;  /* الأنيميشن للنار */
+.wave {
+  display: inline-block;
+  animation: wave 1s ease-in-out infinite;
 }
 
-/* حركة دوران وتحرك الصاروخ */
-@keyframes moveAndRotateRocket {
-  0% {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(40deg);
-  }
-  25% {
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -50%) rotate(40deg);
-  }
-  50% {
-    top: 90%;
-    left: 90%;
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
-  75% {
-    top: 90%;
-    left: 10%;
-    transform: translate(-50%, -50%) rotate(270deg);
-  }
-  100% {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
 }
 
-/* حركة النار (تأثير الإحتراق) */
-@keyframes flameAnimation {
-  0% {
-    transform: rotate(220deg) scale(1);
-    // opacity: 1;
-  }
-  50% {
-    transform:rotate(220deg) scale(1.2);
-    // opacity: 0.8;
-  }
-  100% {
-    transform:rotate(220deg) scale(1);
-    // opacity: 1;
-  }
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: realisticWave 2s ease-in-out infinite;
 }
-
