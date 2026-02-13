@@ -24,7 +24,7 @@
     "degree": "Degree:",
     "degreeValue": "Bachelor",
     "email": "Email:",
-    "emailValue": "ahmed.karim524382",
+    "emailValue": "ahmed.karim524382@gmail.com",
     "freelance": "Freelance:",
     "freelanceValue": "Available",
     "skills": "SKILLS",
@@ -103,6 +103,9 @@
     "viewDetails": "View Details",
     "techStack": "Tech Stack",
     "noResults": "No projects found",
+    "github": "GitHub",
+    "live": "Live",
+    "security": "Security",
     "project1": {
       "title": "E-Commerce",
       "tech": "HYML SCSS TYPESCRIPT ANGULAR Material API BOOTSTRAP JQuery",

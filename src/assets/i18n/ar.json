@@ -103,6 +103,9 @@
     "viewDetails": "عرض التفاصيل",
     "techStack": "التقنيات المستخدمة",
     "noResults": "لم يتم العثور على مشاريع",
+    "github": "جيت هب",
+    "live": "عرض مباشر",
+    "security": "الأمان",
     "project1": {
       "title": "التجارة الإلكترونية",
       "tech": "HTML SCSS TYPESCRIPT ANGULAR Material API BOOTSTRAP JQuery",
