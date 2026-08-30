@@ -4,6 +4,7 @@
     "about": "About",
     "services": "Services",
     "projects": "Projects",
+    "resume": "Resume",
     "search": "Search..."
   },
   "about": {
@@ -152,6 +153,12 @@
       "github": "GitHub",
       "live": "Live Magic"
     }
+  },
+  "resume": {
+    "title": "Resume",
+    "subtitle": "MY RESUME",
+    "download": "Download Resume",
+    "openNewTab": "Open in New Tab"
   },
   "footer": {
     "developedBy": "Developed by",

@@ -25,8 +25,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   navItems: NavItem[] = [
     { link: '/home', label: 'navbar.home', icon: 'fa-solid fa-house' },
     { link: '/about', label: 'navbar.about', icon: 'fa-solid fa-user' },
-    { link: '/services', label: 'navbar.services', icon: 'fa-solid fa-briefcase' },
-    { link: '/projects', label: 'navbar.projects', icon: 'fa-solid fa-code' }
+    // { link: '/services', label: 'navbar.services', icon: 'fa-solid fa-briefcase' },
+    { link: '/projects', label: 'navbar.projects', icon: 'fa-solid fa-code' },
+    { link: '/resume', label: 'navbar.resume', icon: 'fa-solid fa-file-lines' }
   ];
 
   constructor(
